@@ -17,6 +17,7 @@ public class TwixyModel extends EntityModel<TwixyEntity> {
     new EntityModelLayer(
         Identifier.of(TwixyMod.MOD_ID, "twixy"),
         "main"
+    
             );
 
     private final ModelPart body;
@@ -56,8 +57,7 @@ public class TwixyModel extends EntityModel<TwixyEntity> {
                 "belly",
                 ModelPartBuilder.create()
                         .uv(15, -3)
-                        // Slightly smaller body; legs and tail are unchanged.
-                        .cuboid(-4.0F, -8.0F, -2.0F, 8.0F, 16.0F, 9.0F, new Dilation(-0.25F)),
+                        .cuboid(-4.0F, -8.0F, -2.0F, 8.0F, 16.0F, 9.0F),
                 ModelTransform.of(0.0F, 0.0F, 0.0F,
                         1.5708F, 0.0F, 0.0F)
         );
@@ -66,10 +66,9 @@ public class TwixyModel extends EntityModel<TwixyEntity> {
                 "head",
                 ModelPartBuilder.create()
                         .uv(0, -1)
-                        // Slightly smaller head while keeping its position.
-                        .cuboid(-1.5F, -3.0F, -4.0F, 5.0F, 5.0F, 6.0F, new Dilation(-0.25F))
+                        .cuboid(-1.5F, -3.0F, -4.0F, 5.0F, 5.0F, 6.0F)
                         .uv(0, 23)
-                        .cuboid(-0.5F, -1.0156F, -5.0F, 3.0F, 3.0F, 3.0F, new Dilation(-0.25F)),
+                        .cuboid(-0.5F, -1.0156F, -5.0F, 3.0F, 3.0F, 3.0F),
                 ModelTransform.pivot(-1.0F, -3.0F, -10.0F)
         );
 
@@ -126,8 +125,7 @@ public class TwixyModel extends EntityModel<TwixyEntity> {
                 ModelTransform.pivot(0.0F, 13.0F, 13.0F)
         );
 
-        // Match the new 128x128 Twixy texture.
-        return TexturedModelData.of(modelData, 128, 128);
+        return TexturedModelData.of(modelData, 64, 64);
     }
 
     @Override
