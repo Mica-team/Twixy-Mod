@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "twixy-mod",
 	"version": "${version}",
-	"name": "Twixy mod",
+	"name": "Twixy",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Me!"
